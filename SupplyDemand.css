@@ -1,0 +1,318 @@
+.wrapper {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* A media query for a large screen */
+@media (min-width: 1170px) {
+  .wrapper {
+    max-width: 1170px;
+  }
+}
+
+@keyframes mymove {
+  50% {box-shadow: 10px 20px 30px blue;}
+}
+
+h1 {
+  text-shadow: 0 0 3px #FF0000;
+  font-size: 40px;
+}
+
+h2 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  font-size: 34px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px
+}
+
+.topnav a {
+  float: left;
+  color: #FF0000;
+  text-align: center;
+  padding: 24px 18px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+    
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+.topnav a:hover {
+  background-color: #FFFF00;
+  color: red
+}
+
+.topnav a.active {
+  background-color: #00FFFF;
+  color: red
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+div {
+  font-family: myFirstFont;
+}
+body, html {
+  height: 100%;
+}
+
+
+
+
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+
+@import url(https://www.reviewecon.com/);
+.snip1585 {
+  background-color: rgb(41, 46, 57);
+  color: #fff;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin: 10px;
+  max-width: 900px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+  background-color: coral;
+  color: white;
+  animation: mymove 5s infinite;
+}
+
+.snip1585 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1585:before,
+.snip1585:after {
+  background-color: rgba(46, 52, 64,  0.5);
+  border-top: 50px solid rgba(46, 52, 64, 0.5);
+  border-bottom: 50px solid rgba(46, 52, 64, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.snip1585:before {
+  -webkit-transform: scaleY(2);
+  transform: scaleY(2);
+}
+
+.snip1585:after {
+  -webkit-transform: scaleY(2);
+  transform: scaleY(2);
+}
+
+.snip1585 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.snip1585 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.snip1585 h3 {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.snip1585 h3 span {
+  display: block;
+  font-weight: 700;
+}
+
+.snip1585 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.snip1585:hover > img,
+.snip1585.hover > img {
+  opacity: 0.7;
+}
+
+.snip1585:hover:before,
+.snip1585.hover:before,
+.snip1585:hover:after,
+.snip1585.hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.snip1585:hover figcaption,
+.snip1585.hover figcaption {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: rgb(228, 164, 236);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 12px;
+  background: #32ff16ce;
+  width: 0%;
+}
+
+
+
+
+
+
+.vl {
+  border-left: 6px solid green;
+  height: 350px;
+  position: relative;
+  left: 50%;
+  margin-left: 0px;
+  top: 0;
+  animation-name: increase;
+  animation-duration: 2s;
+  transform: rotate(-45deg);
+}
+
+@keyframes increase {
+0%   {background-color:rgba(255, 255, 255, 0); left:90px; top:0px;}
+100% {background-color:rgba(255, 255, 255, 0); left:180px; top:0px;}
+}
+
+div {
+  animation-fill-mode: forwards;
+}
+
+.vi {
+  border-left: 6px solid green;
+  height: 350px;
+  position: relative;
+  left: 50%;
+  margin-left: 0px;
+  top: 0;
+  animation-name: decrease;
+  animation-duration: 2s;
+  transform: rotate(-45deg);
+}
+
+@keyframes decrease {
+  0%   {background-color:rgba(255, 255, 255, 0); left:180px; top:0px;}
+  100% {background-color:rgba(255, 255, 255, 0); left:90px; top:0px;}
+  }
+
+  @import url(https://www.reviewecon.com/);
+.snip1586 {
+  background-color: rgb(41, 46, 57);
+  color: #fff;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin: 10px;
+  max-width: 657px;
+  min-width: 230px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+  background-color: coral;
+  color: white;
+  animation: mymove 5s infinite;
+}
